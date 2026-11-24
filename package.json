@@ -1,0 +1,23 @@
+{
+  "name": "even-g2-running",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "test": "node --test src/*.test.ts",
+    "sim": "evenhub-simulator http://localhost:5173",
+    "qr": "evenhub qr",
+    "pack": "npm run build && evenhub pack app.json dist -o running.ehpk"
+  },
+  "dependencies": {
+    "@evenrealities/even_hub_sdk": "^0.0.16"
+  },
+  "devDependencies": {
+    "@evenrealities/evenhub-cli": "^0.2.0",
+    "@evenrealities/evenhub-simulator": "^0.9.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
